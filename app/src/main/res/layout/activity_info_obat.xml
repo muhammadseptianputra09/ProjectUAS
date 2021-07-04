@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/Backround"
+    android:layout_height="wrap_content"
+    tools:context=".InfoObat">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="690dp"
+        android:layout_marginBottom="356dp"
+        android:background="@color/Backround"
+        android:orientation="vertical"
+        android:padding="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="60dp"
+            android:text="DAFTAR OBAT"
+            android:textAlignment="center"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+        
+        <ListView
+            android:id="@+id/listObat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/Clrbtn"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="KEMBALI"
+            android:id="@+id/btnkmbliio"
+            android:textColor="#FFFFFF"
+            tools:layout_editor_absoluteX="192dp"
+            tools:layout_editor_absoluteY="357dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

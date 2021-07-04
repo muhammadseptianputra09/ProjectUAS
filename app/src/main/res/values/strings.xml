@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Apotik Sehat</string>
+    <string name="Alamat">
+        Jl Jend Sudirman No1234 Kota Palembang
+        (0711543624)</string>
+    <string name="Namaapotik">Apotik Sehat</string>
+    <string name="Daftar">Daftar</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="Masuk">Masuk</string>
+    <string name="infoobat">Info Obat</string>
+    <string name="DataObat">Data Obat</string>
+    <string name="MenuTransaksi">Menu Transaksi</string>
+    <string name="JudulInputObat">Input Data Obat</string>
+    <string name="History">Riwayat Transaksi</string>
+    <string name="KodeObat">Kode Obat</string>
+    <string name="Jumlah">Jumlah</string>
+    <string name="NamaObat">Nama Obat</string>
+    <string name="Transaksi">Transaksi</string>
+    <string name="Keluar">Keluar</string>
+    <string name="Harga">Harga</string>
+    <string name="Total">Total</string>
+    <string name="Tambahkan">Tambahkan</string>
+    <string name="Nama">Namar</string>
+</resources>

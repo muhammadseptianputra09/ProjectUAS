@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "904450318128",
+    "project_id": "apotik-sehat-uas",
+    "storage_bucket": "apotik-sehat-uas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:904450318128:android:1908e0b6022a70969c72f5",
+        "android_client_info": {
+          "package_name": "com.example.apotiksehat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "904450318128-0rarimfq346ttifvsivtacapq8fmbv2u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhkvCtDwYWMHoWhQogAzILZPnVDS7rFsE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "904450318128-0rarimfq346ttifvsivtacapq8fmbv2u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

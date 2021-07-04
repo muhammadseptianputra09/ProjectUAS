@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Backround"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/edEmail"
+        android:layout_width="255dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="@string/Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/namaapotik"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="@+id/namaapotik"
+        app:layout_constraintTop_toBottomOf="@+id/namaapotik" />
+
+    <EditText
+        android:id="@+id/edPass"
+        android:layout_width="254dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="@string/Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/edEmail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edEmail"
+        app:layout_constraintTop_toBottomOf="@+id/edEmail" />
+
+    <TextView
+        android:id="@+id/namaapotik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:text="@string/Namaapotik"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17" />
+
+    <Button
+        android:id="@+id/btnmasuk"
+        android:layout_width="126dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="@color/Clrbtn"
+        android:text="@string/Masuk"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/edPass"
+        app:layout_constraintHorizontal_bias="0.57"
+        app:layout_constraintStart_toStartOf="@+id/edPass"
+        app:layout_constraintTop_toBottomOf="@+id/edPass" />
+
+    <TextView
+        android:id="@+id/tvDaftar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/Daftar"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/btnmasuk"
+        app:layout_constraintStart_toStartOf="@+id/btnmasuk"
+        app:layout_constraintTop_toBottomOf="@+id/btnmasuk" />
+
+    <TextView
+        android:id="@+id/alamat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="232dp"
+        android:text="@string/Alamat"
+        android:textColor="@color/Clrbtn"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tvDaftar"
+        app:layout_constraintStart_toStartOf="@+id/tvDaftar"
+        app:layout_constraintTop_toBottomOf="@+id/tvDaftar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
