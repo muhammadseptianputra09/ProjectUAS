@@ -35,7 +35,7 @@
             android:text="@string/KodeObat" />
 
         <EditText
-            android:id="@+id/input1"
+            android:id="@+id/edkdobt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center" />
@@ -46,7 +46,7 @@
             android:text="@string/NamaObat" />
 
         <EditText
-            android:id="@+id/input2"
+            android:id="@+id/ednmobt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center" />
@@ -57,7 +57,7 @@
             android:text="@string/Harga" />
 
         <EditText
-            android:id="@+id/input4"
+            android:id="@+id/edhrg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center" />
@@ -68,7 +68,7 @@
             android:text="@string/Jumlah" />
 
         <EditText
-            android:id="@+id/input5"
+            android:id="@+id/edjml"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center" />
@@ -78,7 +78,7 @@
             android:text="@string/Total" />
 
         <EditText
-            android:id="@+id/input6"
+            android:id="@+id/edttl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center" />

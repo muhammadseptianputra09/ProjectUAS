@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class HalamanDashboard extends AppCompatActivity {
+    // deklarasi komponen
     private ImageView RW;
     private ImageView IO;
     private ImageView DO;
@@ -17,9 +18,12 @@ public class HalamanDashboard extends AppCompatActivity {
 
 
     @Override
+    // kondisi awal saat Activity baru dibuat
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_halaman_dashboard);
+
+        // inisialisasi komponen
 
         RW = (ImageView) findViewById(R.id.RW);
         IO = (ImageView) findViewById(R.id.IO);
@@ -28,6 +32,7 @@ public class HalamanDashboard extends AppCompatActivity {
 
         RW.setOnClickListener(new View.OnClickListener() {
             @Override
+            // sebuah action dan komunikasi antar komponen aplikasi.
             public void onClick(View v) {
 
                 Intent intent = new Intent(HalamanDashboard.this,RiwayatTransaksi.class);

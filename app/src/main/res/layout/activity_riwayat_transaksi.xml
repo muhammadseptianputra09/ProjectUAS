@@ -29,14 +29,15 @@
             android:textStyle="bold" />
 
         <ListView
-            android:id="@+id/listObat"
+            android:id="@+id/listtransaksi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:layout_weight="1" />
 
         <Button
-            android:layout_width="100dp"
+            android:id="@+id/btnkembalirw"
+            android:layout_width="153dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
@@ -44,7 +45,6 @@
             android:background="@color/Clrbtn"
             android:foreground="?android:attr/selectableItemBackground"
             android:text="KEMBALI"
-            android:id="@+id/btnkembalirw"
             android:textColor="#FFFFFF"
             tools:layout_editor_absoluteX="192dp"
             tools:layout_editor_absoluteY="357dp" />

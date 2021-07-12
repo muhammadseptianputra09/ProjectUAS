@@ -12,61 +12,60 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import Obat.Obat;
+import Transaksi.Transaksi;
+
 public class DataObat extends AppCompatActivity {
-    private DatabaseReference database;
+    // deklarasi komponen
+    DatabaseReference mAuth;
     private EditText edkode;
     private EditText nmobat;
     private EditText edjml;
     private EditText edhrga;
     public Button btntmbh;
 
+
     @Override
+    // kondisi awal saat Activity baru dibuat
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_obat);
 
+        // inisialisasi komponen
+
         edkode = (EditText) findViewById(R.id.edikode);
         nmobat = (EditText) findViewById(R.id.edinmobt);
-        edjml  = (EditText) findViewById(R.id.edijml);
+        edjml = (EditText) findViewById(R.id.edijml);
         edhrga = (EditText) findViewById(R.id.edihrga);
         btntmbh = (Button) findViewById(R.id.btntmbh);
 
-        database = FirebaseDatabase.getInstance().getReference();
-
+        //PROSES input data kedalam firebase dengan nama database Obat
+        mAuth = FirebaseDatabase.getInstance().getReference().child("Obat");
+        // method onclick
         btntmbh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!(edkode.getText().toString().isEmpty()) && !(nmobat.getText().toString().isEmpty()) && edjml.getText().toString().isEmpty() && edhrga.getText().toString().isEmpty())
-                    submitObat(new Obat(edkode.getText().toString(), nmobat.getText().toString(), edjml.getText().toString(), edhrga.getText().toString()));
-                else
-                    Toast.makeText(getApplicationContext(), "Data TIdak Boleh Kosong", Toast.LENGTH_LONG).show();
-
-                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(edkode.getWindowToken(),0);
+                Tambahobat();
             }
         });
-
-
     }
 
-    private void submitObat(Obat obat) {
-        database.child("Barang").push().setValue(obat).addOnSuccessListener(this, new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                edkode.setText("");
-                nmobat.setText("");
-                edjml.setText("");
-                edhrga.setText("");
-                Toast.makeText(getApplicationContext(), "Data Berhasil Ditambahkan", Toast.LENGTH_LONG).show();
-            }
-        });
+    //methode untuk menambahkan obat
+    private void Tambahobat() {
 
-    }
-    public static Intent getActIntent(DataObat dataObat ) {
-        return new Intent(dataObat, DataObat.class);
-    }
+        String kode = edkode.getText().toString();
+        String namaobat = nmobat.getText().toString();
+        String jumlah = edjml.getText().toString();
+        String Harga = edhrga.getText().toString();
 
+        Obat obat = new Obat(kode, namaobat, jumlah, Harga);
+
+        //Memigrasikan Aplikasi Parse pada Android ke Firebase
+        mAuth.push().setValue(obat);
+        Toast.makeText(DataObat.this, "obat berhasil di tambahkan", Toast.LENGTH_SHORT);
+    }
 }
